@@ -10,7 +10,7 @@ function PropertyCard({ property }: PropertyCardProps) {
   return (
     <article className="group overflow-hidden rounded-lg border border-lurevia-border bg-lurevia-surface">
       {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-4/3 overflow-hidden">
         <img
           src={property.image}
           alt={property.title}
