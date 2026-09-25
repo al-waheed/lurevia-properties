@@ -51,7 +51,6 @@ The project was designed to feel like a real production website rather than a te
 
 ```text
 src/
-├── assets/
 ├── components/
 │   ├── Footer.tsx
 │   ├── Navbar.tsx
@@ -59,7 +58,6 @@ src/
 ├── data/
 │   ├── agents.ts
 │   └── properties.ts
-├── layouts/
 ├── pages/
 │   ├── Home.tsx
 │   ├── Properties.tsx
