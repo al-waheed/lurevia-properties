@@ -10,7 +10,7 @@ The project was designed to feel like a real production website rather than a te
 
 ## Preview
 
-![LUREVIA Properties Landing Page](public/screenshots/landing-page.png)
+![LUREVIA Properties Landing Page](public/screenshots/landing.png)
 
 ## Features
 
