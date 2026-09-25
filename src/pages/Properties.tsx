@@ -31,17 +31,17 @@ function Properties() {
   return (
     <div>
       {/* Page Header */}
-      <section className="border-b border-aurel-border bg-white">
+      <section className="border-b border-lurevia-border bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aurel-green">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lurevia-green">
             Property collection
           </p>
 
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-tight text-aurel-text sm:text-6xl">
+          <h1 className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-tight text-lurevia-text sm:text-6xl">
             Find a place that fits your life.
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-aurel-muted">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-lurevia-muted">
             Explore thoughtfully selected homes, apartments and investment
             properties across our featured locations.
           </p>
@@ -49,13 +49,13 @@ function Properties() {
       </section>
 
       {/* Filters */}
-      <section className="border-b border-aurel-border bg-aurel-bg">
+      <section className="border-b border-lurevia-border bg-lurevia-bg">
         <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
           <div className="grid gap-4 md:grid-cols-[2fr_1fr_1fr_auto]">
             <div className="relative">
               <Search
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-aurel-muted"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-lurevia-muted"
               />
 
               <input
@@ -63,14 +63,14 @@ function Properties() {
                 placeholder="Search by property or location"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="h-12 w-full border border-aurel-border bg-white pl-11 pr-4 text-sm outline-none transition-colors focus:border-aurel-green"
+                className="h-12 w-full border border-lurevia-border bg-white pl-11 pr-4 text-sm outline-none transition-colors focus:border-lurevia-green"
               />
             </div>
 
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value)}
-              className="h-12 border border-aurel-border bg-white px-4 text-sm text-aurel-text outline-none focus:border-aurel-green"
+              className="h-12 border border-lurevia-border bg-white px-4 text-sm text-lurevia-text outline-none focus:border-lurevia-green"
             >
               <option value="All">All properties</option>
               <option value="For Sale">For Sale</option>
@@ -80,7 +80,7 @@ function Properties() {
             <select
               value={beds}
               onChange={(e) => setBeds(e.target.value)}
-              className="h-12 border border-aurel-border bg-white px-4 text-sm text-aurel-text outline-none focus:border-aurel-green"
+              className="h-12 border border-lurevia-border bg-white px-4 text-sm text-lurevia-text outline-none focus:border-lurevia-green"
             >
               <option value="Any">Any bedrooms</option>
               <option value="3">3+ bedrooms</option>
@@ -91,7 +91,7 @@ function Properties() {
             <button
               type="button"
               onClick={clearFilters}
-              className="flex h-12 items-center justify-center gap-2 border border-aurel-border px-5 text-sm font-medium text-aurel-text transition-colors hover:bg-white"
+              className="flex h-12 items-center justify-center gap-2 border border-lurevia-border px-5 text-sm font-medium text-lurevia-text transition-colors hover:bg-white"
             >
               <X size={16} />
               Clear
@@ -105,8 +105,8 @@ function Properties() {
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
           <div className="mb-8 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <SlidersHorizontal size={17} className="text-aurel-muted" />
-              <p className="text-sm text-aurel-muted">
+              <SlidersHorizontal size={17} className="text-lurevia-muted" />
+              <p className="text-sm text-lurevia-muted">
                 {filteredProperties.length}{" "}
                 {filteredProperties.length === 1 ? "property" : "properties"}
               </p>
@@ -120,19 +120,19 @@ function Properties() {
               ))}
             </div>
           ) : (
-            <div className="border border-aurel-border bg-white px-6 py-20 text-center">
-              <h2 className="font-display text-3xl font-semibold text-aurel-text">
+            <div className="border border-lurevia-border bg-white px-6 py-20 text-center">
+              <h2 className="font-display text-3xl font-semibold text-lurevia-text">
                 No properties found
               </h2>
 
-              <p className="mt-3 text-sm text-aurel-muted">
+              <p className="mt-3 text-sm text-lurevia-muted">
                 Try adjusting your search or filters.
               </p>
 
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-6 bg-aurel-green px-5 py-3 text-sm font-medium text-white hover:bg-aurel-green-dark"
+                className="mt-6 bg-lurevia-green px-5 py-3 text-sm font-medium text-white hover:bg-lurevia-green-dark"
               >
                 Clear filters
               </button>

@@ -40,14 +40,14 @@ type TestimonialProps = {
 
 function Testimonial({ quote, name, role }: TestimonialProps) {
   return (
-    <article className="border-t border-aurel-border pt-6">
-      <p className="font-display text-2xl leading-snug text-aurel-text">
+    <article className="border-t border-lurevia-border pt-6">
+      <p className="font-display text-2xl leading-snug text-lurevia-text">
         “{quote}”
       </p>
 
       <div className="mt-6">
-        <p className="text-sm font-semibold text-aurel-text">{name}</p>
-        <p className="mt-1 text-xs text-aurel-muted">{role}</p>
+        <p className="text-sm font-semibold text-lurevia-text">{name}</p>
+        <p className="mt-1 text-xs text-lurevia-muted">{role}</p>
       </div>
     </article>
   );
@@ -89,7 +89,7 @@ function Home() {
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 to="/properties"
-                className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-aurel-text transition-colors hover:bg-aurel-bg"
+                className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-lurevia-text transition-colors hover:bg-lurevia-bg"
               >
                 Explore properties
                 <ArrowRight size={17} />
@@ -108,24 +108,24 @@ function Home() {
         {/* Search panel */}
         <div className="absolute bottom-6 left-1/2 w-[calc(100%-2.5rem)] max-w-5xl -translate-x-1/2">
           <div className="grid overflow-hidden rounded-lg bg-white shadow-xl md:grid-cols-[1.2fr_1fr_1fr_auto]">
-            <div className="border-b border-aurel-border p-4 md:border-b-0 md:border-r">
-              <label className="block text-xs font-medium uppercase tracking-wide text-aurel-muted">
+            <div className="border-b border-lurevia-border p-4 md:border-b-0 md:border-r">
+              <label className="block text-xs font-medium uppercase tracking-wide text-lurevia-muted">
                 Location
               </label>
 
               <input
                 type="text"
                 placeholder="Where do you want to live?"
-                className="mt-1 w-full border-0 bg-transparent text-sm text-aurel-text outline-none placeholder:text-aurel-muted"
+                className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none placeholder:text-lurevia-muted"
               />
             </div>
 
-            <div className="border-b border-aurel-border p-4 md:border-b-0 md:border-r">
-              <label className="block text-xs font-medium uppercase tracking-wide text-aurel-muted">
+            <div className="border-b border-lurevia-border p-4 md:border-b-0 md:border-r">
+              <label className="block text-xs font-medium uppercase tracking-wide text-lurevia-muted">
                 Property type
               </label>
 
-              <select className="mt-1 w-full border-0 bg-transparent text-sm text-aurel-text outline-none">
+              <select className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none">
                 <option>Any property</option>
                 <option>House</option>
                 <option>Apartment</option>
@@ -133,12 +133,12 @@ function Home() {
               </select>
             </div>
 
-            <div className="border-b border-aurel-border p-4 md:border-b-0 md:border-r">
-              <label className="block text-xs font-medium uppercase tracking-wide text-aurel-muted">
+            <div className="border-b border-lurevia-border p-4 md:border-b-0 md:border-r">
+              <label className="block text-xs font-medium uppercase tracking-wide text-lurevia-muted">
                 Price range
               </label>
 
-              <select className="mt-1 w-full border-0 bg-transparent text-sm text-aurel-text outline-none">
+              <select className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none">
                 <option>Any price</option>
                 <option>₦50m – ₦100m</option>
                 <option>₦100m – ₦200m</option>
@@ -146,7 +146,7 @@ function Home() {
               </select>
             </div>
 
-            <button className="flex items-center justify-center gap-2 bg-aurel-green px-7 py-5 text-sm font-medium text-white transition-colors hover:bg-aurel-green-dark md:py-0">
+            <button className="flex items-center justify-center gap-2 bg-lurevia-green px-7 py-5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark md:py-0">
               <Search size={18} />
               Search
             </button>
@@ -156,18 +156,18 @@ function Home() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aurel-green">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lurevia-green">
               Featured properties
             </p>
 
-            <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight text-aurel-text sm:text-5xl">
+            <h2 className="mt-3 max-w-xl font-display text-4xl font-semibold leading-tight text-lurevia-text sm:text-5xl">
               Carefully selected homes for exceptional living.
             </h2>
           </div>
 
           <Link
             to="/properties"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-aurel-text"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-lurevia-text"
           >
             View all properties
             <ArrowRight size={17} />
@@ -180,18 +180,18 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="border-y border-aurel-border bg-white">
+      <section className="border-y border-lurevia-border bg-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20 lg:py-28 lg:px-10">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aurel-green">
-              Why AUREL
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lurevia-green">
+              Why LUREVIA
             </p>
 
-            <h2 className="mt-4 max-w-lg font-display text-4xl font-semibold leading-tight text-aurel-text sm:text-5xl">
+            <h2 className="mt-4 max-w-lg font-display text-4xl font-semibold leading-tight text-lurevia-text sm:text-5xl">
               Property decisions made with clarity and confidence.
             </h2>
 
-            <p className="mt-6 max-w-lg text-base leading-7 text-aurel-muted">
+            <p className="mt-6 max-w-lg text-base leading-7 text-lurevia-muted">
               We believe finding a property should feel considered, not
               complicated. Our team combines local knowledge, careful selection,
               and a personal approach to help clients make informed decisions.
@@ -199,9 +199,9 @@ function Home() {
 
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-aurel-green"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-lurevia-green"
             >
-              More about AUREL
+              More about LUREVIA
               <ArrowRight size={17} />
             </Link>
           </div>
@@ -213,7 +213,7 @@ function Home() {
               className="aspect-[4/3] w-full object-cover"
             />
 
-            <div className="absolute -bottom-6 -left-4 hidden bg-aurel-green p-6 text-white sm:block lg:-left-8">
+            <div className="absolute -bottom-6 -left-4 hidden bg-lurevia-green p-6 text-white sm:block lg:-left-8">
               <p className="font-display text-4xl">18</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-white/70">
                 Years of experience
@@ -225,35 +225,35 @@ function Home() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
         <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 lg:gap-8">
           <div>
-            <p className="font-display text-4xl font-semibold text-aurel-text">
+            <p className="font-display text-4xl font-semibold text-lurevia-text">
               250+
             </p>
-            <p className="mt-2 text-sm text-aurel-muted">Properties listed</p>
+            <p className="mt-2 text-sm text-lurevia-muted">Properties listed</p>
           </div>
 
           <div>
-            <p className="font-display text-4xl font-semibold text-aurel-text">
+            <p className="font-display text-4xl font-semibold text-lurevia-text">
               18
             </p>
-            <p className="mt-2 text-sm text-aurel-muted">Years of experience</p>
+            <p className="mt-2 text-sm text-lurevia-muted">Years of experience</p>
           </div>
 
           <div>
-            <p className="font-display text-4xl font-semibold text-aurel-text">
+            <p className="font-display text-4xl font-semibold text-lurevia-text">
               120+
             </p>
-            <p className="mt-2 text-sm text-aurel-muted">Clients served</p>
+            <p className="mt-2 text-sm text-lurevia-muted">Clients served</p>
           </div>
 
           <div>
-            <p className="font-display text-4xl font-semibold text-aurel-text">
+            <p className="font-display text-4xl font-semibold text-lurevia-text">
               8
             </p>
-            <p className="mt-2 text-sm text-aurel-muted">Areas covered</p>
+            <p className="mt-2 text-sm text-lurevia-muted">Areas covered</p>
           </div>
         </div>
       </section>
-      <section className="bg-aurel-text text-white">
+      <section className="bg-lurevia-text text-white">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
@@ -298,18 +298,18 @@ function Home() {
       </section>
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aurel-green">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lurevia-green">
             Client stories
           </p>
 
-          <h2 className="mt-4 font-display text-4xl font-semibold text-aurel-text sm:text-5xl">
+          <h2 className="mt-4 font-display text-4xl font-semibold text-lurevia-text sm:text-5xl">
             A different kind of property experience.
           </h2>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Testimonial
-            quote="AUREL made the entire process feel simple. They understood exactly what we were looking for."
+            quote="LUREVIA made the entire process feel simple. They understood exactly what we were looking for."
             name="Amara Okafor"
             role="Homeowner"
           />
@@ -327,7 +327,7 @@ function Home() {
           />
         </div>
       </section>
-      <section className="mx-5 mb-20 overflow-hidden bg-aurel-green sm:mx-8 lg:mx-10 lg:mb-28">
+      <section className="mx-5 mb-20 overflow-hidden bg-lurevia-green sm:mx-8 lg:mx-10 lg:mb-28">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
@@ -347,7 +347,7 @@ function Home() {
 
             <Link
               to="/contact"
-              className="inline-flex w-fit items-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-aurel-text transition-colors hover:bg-aurel-bg"
+              className="inline-flex w-fit items-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-lurevia-text transition-colors hover:bg-lurevia-bg"
             >
               Talk to an agent
               <ArrowRight size={17} />

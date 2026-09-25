@@ -10,13 +10,13 @@ function AgentProfile() {
   if (!agent) {
     return (
       <section className="mx-auto max-w-7xl px-5 py-24 text-center sm:px-8 lg:px-10">
-        <h1 className="font-display text-4xl font-semibold text-aurel-text">
+        <h1 className="font-display text-4xl font-semibold text-lurevia-text">
           Agent not found
         </h1>
 
         <Link
           to="/agents"
-          className="mt-6 inline-flex bg-aurel-green px-5 py-3 text-sm font-medium text-white"
+          className="mt-6 inline-flex bg-lurevia-green px-5 py-3 text-sm font-medium text-white"
         >
           Back to agents
         </Link>
@@ -29,7 +29,7 @@ function AgentProfile() {
       <div className="mx-auto max-w-7xl px-5 pt-8 sm:px-8 lg:px-10">
         <Link
           to="/agents"
-          className="inline-flex items-center gap-2 text-sm text-aurel-muted hover:text-aurel-text"
+          className="inline-flex items-center gap-2 text-sm text-lurevia-muted hover:text-lurevia-text"
         >
           <ArrowLeft size={16} />
           Back to agents
@@ -47,15 +47,15 @@ function AgentProfile() {
           </div>
 
           <div className="pt-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aurel-green">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lurevia-green">
               {agent.role}
             </p>
 
-            <h1 className="mt-4 font-display text-5xl font-semibold text-aurel-text sm:text-6xl">
+            <h1 className="mt-4 font-display text-5xl font-semibold text-lurevia-text sm:text-6xl">
               {agent.name}
             </h1>
 
-            <div className="mt-5 flex flex-wrap gap-5 text-sm text-aurel-muted">
+            <div className="mt-5 flex flex-wrap gap-5 text-sm text-lurevia-muted">
               <span className="flex items-center gap-2">
                 <MapPin size={16} />
                 {agent.location}
@@ -67,12 +67,12 @@ function AgentProfile() {
               </span>
             </div>
 
-            <p className="mt-8 max-w-2xl text-base leading-8 text-aurel-muted">
+            <p className="mt-8 max-w-2xl text-base leading-8 text-lurevia-muted">
               {agent.bio}
             </p>
 
             <div className="mt-10">
-              <p className="text-sm font-semibold text-aurel-text">
+              <p className="text-sm font-semibold text-lurevia-text">
                 Specialties
               </p>
 
@@ -80,7 +80,7 @@ function AgentProfile() {
                 {agent.specialties.map((specialty) => (
                   <span
                     key={specialty}
-                    className="border border-aurel-border bg-white px-4 py-2 text-xs text-aurel-muted"
+                    className="border border-lurevia-border bg-white px-4 py-2 text-xs text-lurevia-muted"
                   >
                     {specialty}
                   </span>
@@ -90,7 +90,7 @@ function AgentProfile() {
 
             <Link
               to="/contact"
-              className="mt-10 inline-flex items-center gap-2 bg-aurel-green px-6 py-3.5 text-sm font-medium text-white hover:bg-aurel-green-dark"
+              className="mt-10 inline-flex items-center gap-2 bg-lurevia-green px-6 py-3.5 text-sm font-medium text-white hover:bg-lurevia-green-dark"
             >
               <Phone size={17} />
               Contact {agent.name.split(" ")[0]}

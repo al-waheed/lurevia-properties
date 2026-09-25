@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-aurel-bg">
+      <div className="min-h-screen bg-lurevia-bg">
         <Navbar />
 
         <main>
