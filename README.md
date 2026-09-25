@@ -8,6 +8,10 @@ LUREVIA Properties is a fictional premium real-estate brand focused on residenti
 
 The project was designed to feel like a real production website rather than a template or demo.
 
+## Preview
+
+![LUREVIA Properties Landing Page](public/screenshots/landing-page.png)
+
 ## Features
 
 - Responsive real-estate website
