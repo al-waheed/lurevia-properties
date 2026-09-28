@@ -1,4 +1,5 @@
-import { ArrowRight, Search } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import PropertyCard from "../components/PropertyCard";
 import { properties } from "../data/properties";
@@ -13,7 +14,7 @@ function LocationCard({ name, properties, image }: LocationCardProps) {
   return (
     <Link
       to="/properties"
-      className="group relative aspect-[4/5] overflow-hidden"
+      className="group relative aspect-4/5 overflow-hidden"
     >
       <img
         src={image}
@@ -54,6 +55,20 @@ function Testimonial({ quote, name, role }: TestimonialProps) {
 }
 
 function Home() {
+  const [location, setLocation] = useState("");
+  const [price, setPrice] = useState("Any price");
+  const [propertyType, setPropertyType] = useState("Any property");
+
+  const filteredProperties = properties.filter((property) =>
+    property.location.toLowerCase().includes(location.toLowerCase()),
+  );
+
+  const clearFilters = () => {
+    setLocation("");
+    setPrice("Any price");
+    setPropertyType("Any property");
+  };
+
   return (
     <div>
       {/* Hero */}
@@ -115,6 +130,8 @@ function Home() {
 
               <input
                 type="text"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
                 placeholder="Where do you want to live?"
                 className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none placeholder:text-lurevia-muted"
               />
@@ -125,7 +142,11 @@ function Home() {
                 Property type
               </label>
 
-              <select className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none">
+              <select
+                value={propertyType}
+                onChange={(e) => setPropertyType(e.target.value)}
+                className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none"
+              >
                 <option>Any property</option>
                 <option>House</option>
                 <option>Apartment</option>
@@ -138,7 +159,11 @@ function Home() {
                 Price range
               </label>
 
-              <select className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none">
+              <select
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="mt-1 w-full border-0 bg-transparent text-sm text-lurevia-text outline-none"
+              >
                 <option>Any price</option>
                 <option>₦50m – ₦100m</option>
                 <option>₦100m – ₦200m</option>
@@ -146,10 +171,13 @@ function Home() {
               </select>
             </div>
 
-            <button className="flex items-center justify-center gap-2 bg-lurevia-green px-7 py-5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark md:py-0">
+            {/* <button
+              // onClick={searchProperties()}
+              className="flex items-center justify-center gap-2 bg-lurevia-green px-7 py-5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark md:py-0"
+            >
               <Search size={18} />
               Search
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
@@ -174,11 +202,31 @@ function Home() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {properties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
-        </div>
+        {filteredProperties.length > 0 ? (
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredProperties.map((property) => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
+        ) : (
+          <div className="border border-lurevia-border bg-white px-6 py-20 text-center">
+            <h2 className="font-display text-3xl font-semibold text-lurevia-text">
+              No properties found
+            </h2>
+
+            <p className="mt-3 text-sm text-lurevia-muted">
+              Try adjusting your search or filters.
+            </p>
+
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="mt-6 bg-lurevia-green px-5 py-3 text-sm font-medium text-white hover:bg-lurevia-green-dark"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </section>
       <section className="border-y border-lurevia-border bg-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20 lg:py-28 lg:px-10">
@@ -210,7 +258,7 @@ function Home() {
             <img
               src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=85"
               alt="Elegant modern interior"
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-4/3 w-full object-cover"
             />
 
             <div className="absolute -bottom-6 -left-4 hidden bg-lurevia-green p-6 text-white sm:block lg:-left-8">
@@ -235,7 +283,9 @@ function Home() {
             <p className="font-display text-4xl font-semibold text-lurevia-text">
               18
             </p>
-            <p className="mt-2 text-sm text-lurevia-muted">Years of experience</p>
+            <p className="mt-2 text-sm text-lurevia-muted">
+              Years of experience
+            </p>
           </div>
 
           <div>

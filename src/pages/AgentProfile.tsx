@@ -38,7 +38,7 @@ function AgentProfile() {
 
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
         <div className="grid gap-12 lg:grid-cols-[420px_1fr] lg:items-start">
-          <div className="aspect-[4/5] overflow-hidden">
+          <div className="aspect-4/5 overflow-hidden">
             <img
               src={agent.image}
               alt={agent.name}

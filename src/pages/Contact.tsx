@@ -4,8 +4,8 @@ import { useState } from "react";
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setSubmitted(true);
   };
 
@@ -44,7 +44,7 @@ function Contact() {
                     Visit us
                   </p>
                   <p className="mt-1 text-sm leading-6 text-lurevia-muted">
-                    12 Admiralty Way
+                    12 Heavens Way
                     <br />
                     Lagos, Nigeria
                   </p>
@@ -93,7 +93,7 @@ function Contact() {
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
-                  className="mt-6 text-sm font-semibold text-lurevia-green"
+                  className="mt-6 text-sm font-semibold text-lurevia-green cursor-pointer"
                 >
                   Send another message
                 </button>
@@ -169,7 +169,7 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-lurevia-green px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark"
+                  className="w-full bg-lurevia-green px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark cursor-pointer"
                 >
                   Send message
                 </button>

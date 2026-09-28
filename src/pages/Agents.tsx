@@ -28,7 +28,7 @@ function Agents() {
             {agents.map((agent) => (
               <article key={agent.id} className="group">
                 <Link to={`/agents/${agent.id}`}>
-                  <div className="aspect-[4/5] overflow-hidden bg-lurevia-border">
+                  <div className="aspect-4/5 overflow-hidden bg-lurevia-border">
                     <img
                       src={agent.image}
                       alt={agent.name}

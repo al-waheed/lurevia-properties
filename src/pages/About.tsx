@@ -41,7 +41,7 @@ function About() {
             </div>
           </div>
 
-          <div className="aspect-[4/3] overflow-hidden">
+          <div className="aspect-4/3 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
               alt="LUREVIA interior"

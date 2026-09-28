@@ -47,7 +47,7 @@ function PropertyDetails() {
 
       {/* Image */}
       <section className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10">
-        <div className="relative aspect-[16/8] overflow-hidden bg-lurevia-border">
+        <div className="relative aspect-16/8 overflow-hidden bg-lurevia-border">
           <img
             src={property.image}
             alt={property.title}
