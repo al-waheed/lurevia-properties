@@ -170,14 +170,6 @@ function Home() {
                 <option>₦200m+</option>
               </select>
             </div>
-
-            {/* <button
-              // onClick={searchProperties()}
-              className="flex items-center justify-center gap-2 bg-lurevia-green px-7 py-5 text-sm font-medium text-white transition-colors hover:bg-lurevia-green-dark md:py-0"
-            >
-              <Search size={18} />
-              Search
-            </button> */}
           </div>
         </div>
       </section>
