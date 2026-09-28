@@ -57,7 +57,7 @@ function Footer() {
             <h3 className="text-sm font-semibold text-lurevia-text">Contact</h3>
 
             <div className="mt-4 space-y-2 text-sm text-lurevia-muted">
-              <p>12 Admiralty Way, Lagos</p>
+              <p>12A Heavens Way, Lagos</p>
               <p>+234 800 000 0000</p>
               <p>hello@lureviaproperties.com</p>
             </div>

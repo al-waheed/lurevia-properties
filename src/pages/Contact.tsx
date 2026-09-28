@@ -44,7 +44,7 @@ function Contact() {
                     Visit us
                   </p>
                   <p className="mt-1 text-sm leading-6 text-lurevia-muted">
-                    12 Heavens Way
+                    12A Heavens Way
                     <br />
                     Lagos, Nigeria
                   </p>
